@@ -71,7 +71,7 @@ if not df_nao_anotadas.empty:
         salvar_csv(df)
 
         st.success("Anotação salva!")
-        time.sleep(1)
+        #time.sleep()
         del st.session_state.obs
         st.rerun()  # Recarregar a página para mostrar a próxima anotação
 else:

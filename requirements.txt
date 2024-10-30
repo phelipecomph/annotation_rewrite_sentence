@@ -1,3 +1,4 @@
 streamlit==1.39.0
 pandas==1.5.3
 boto3==1.35.36
+numpy==1.26.4

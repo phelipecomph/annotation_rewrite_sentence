@@ -74,7 +74,7 @@ if not df_nao_anotadas.empty:
         st.success("Anotação salva!")
         #time.sleep()
         del st.session_state.obs
-        #del st.session_state.parafrase
+        del st.session_state.parafrase
         st.rerun()  # Recarregar a página para mostrar a próxima anotação
 else:
     st.write("Todas as sentenças foram anotadas!")

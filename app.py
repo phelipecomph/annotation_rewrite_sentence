@@ -36,7 +36,7 @@ st.write(f'Progresso: {int(progresso * 100)}%')
 
 
 st.session_state.obs = ''
-st.session_state['radio'] = False
+st.session_state.radio = None
 
 # Barra de progresso
 st.progress(progresso)
@@ -74,7 +74,6 @@ if not df_nao_anotadas.empty:
         st.success("Anotação salva!")
         #time.sleep()
         del st.session_state.obs
-        del st.session_state.radio
         st.rerun()  # Recarregar a página para mostrar a próxima anotação
 else:
     st.write("Todas as sentenças foram anotadas!")

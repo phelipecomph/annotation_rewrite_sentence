@@ -36,7 +36,7 @@ st.write(f'Progresso: {int(progresso * 100)}%')
 
 
 st.session_state.obs = ''
-st.session_state.radio = ''
+st.session_state['radio'] = False
 
 # Barra de progresso
 st.progress(progresso)

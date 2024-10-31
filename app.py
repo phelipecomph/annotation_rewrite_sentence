@@ -56,7 +56,7 @@ if not df_nao_anotadas.empty:
                  max_chars=None, key="sentenca2")
 
     st.write("É parafrase?")
-    parafrase = st.radio("", ('Sim', 'Não'))
+    parafrase = st.radio("", ('Sim', 'Não'),key="parafrase")
 
     st.write("Observação")
     obs = st.text_area("Obs", key="obs", value="")

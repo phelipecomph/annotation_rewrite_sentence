@@ -36,7 +36,7 @@ st.write(f'Progresso: {int(progresso * 100)}%')
 
 
 st.session_state.obs = ''
-st.session_state.parafrase = ''
+st.session_state.radio = ''
 
 # Barra de progresso
 st.progress(progresso)
@@ -56,7 +56,7 @@ if not df_nao_anotadas.empty:
                  max_chars=None, key="sentenca2")
 
     st.write("É parafrase?")
-    parafrase = st.radio("", ('Sim', 'Não'), index=0)
+    parafrase = st.radio("", ('Sim', 'Não'), key="radio", index=0)
 
     st.write("Observação")
     obs = st.text_area("Obs", key="obs", value="")
@@ -74,7 +74,7 @@ if not df_nao_anotadas.empty:
         st.success("Anotação salva!")
         #time.sleep()
         del st.session_state.obs
-        del st.session_state.parafrase
+        del st.session_state.radio
         st.rerun()  # Recarregar a página para mostrar a próxima anotação
 else:
     st.write("Todas as sentenças foram anotadas!")

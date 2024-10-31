@@ -8,9 +8,9 @@ s3 = boto3.client('s3',
                   aws_access_key_id=st.secrets["AWS_ACCESS_KEY_ID"],
                   aws_secret_access_key=st.secrets["AWS_SECRET_ACCESS_KEY"])
 
-bucket_name = 'static.redacaonota1000.com.br'
+bucket_name = 'red1000-automacao'
 file_path = 'pares_de_sentenca.csv'
-key_name = 'reescrita/pares_de_sentenca.csv'
+key_name = 'data_science/reescrita/pares_de_sentenca.csv'
 
 # Carregar o CSV com as sentenças (substitua 'sentencas.csv' pelo nome do seu arquivo)
 s3.download_file(bucket_name, key_name, file_path)
